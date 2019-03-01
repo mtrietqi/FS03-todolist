@@ -5,6 +5,7 @@ import FilterProgress from "./FilterProgress"
 import FilterLabel from "./FilterLabel"
 import FilterPriority from "./FilterPriority"
 import Sort from "./Sort"
+import SaveDataOnLS from "./SaveDataOnLS"
 class Controls extends Component {
     render() {
         return (
@@ -14,6 +15,9 @@ class Controls extends Component {
                   <h3 className="text-white d-inline font-weight-light ml-2">Lê Quang Song</h3>
                 </div>
                 <AddNewTask />
+                <SaveDataOnLS
+                 saveDataOnLS={this.props.saveDataOnLS}
+                 />
                 {/* Filter */}
                 <div className="px-3">
                   <FilterProgress />

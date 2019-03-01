@@ -9,6 +9,9 @@ import Modal from './Components/Modal/Modal'
 //Import data
 import data from './data'
 class App extends Component {
+  saveDataOnLS=()=>{
+    localStorage.setItem('tasks',JSON.stringify(data))
+  }
   render() {
     return (
       <div className="App">
@@ -17,7 +20,9 @@ class App extends Component {
           <div className="container-fluid">
             <div className="row">
               {/* PANEL */}
-              <Controls />
+              <Controls 
+              saveDataOnLS={this.saveDataOnLS}
+              />
               {/* DISPLAY */}
               <TaskList
               data= {data}
